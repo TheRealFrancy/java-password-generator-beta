@@ -12,7 +12,9 @@ public class frameview extends JFrame {
         add(textField, BorderLayout.PAGE_START);
         add(bottone, BorderLayout.PAGE_END);
         add(textArea, BorderLayout.CENTER);
-        textField.setToolTipText("inserisci lunghezza password ");
+        JScrollPane scrollbar= new JScrollPane(textArea);
+        add(scrollbar);
+        textField.setToolTipText("inserisci lunghezza password");
        textArea.setEditable(false);
       bottone.addActionListener(e -> {
           String lenghtppsw = textField.getText();
