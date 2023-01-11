@@ -30,12 +30,12 @@ public class frameview extends JFrame {
 
               String pswfinal = new String(resultpsw);
               textArea.append(pswfinal + "\n");
-          } catch (StringIndexOutOfBoundsException var7) {
+          } catch (StringIndexOutOfBoundsException e1) {
               JOptionPane.showMessageDialog(null, "Non puoi inserire piu di 64 carrateri.", "Attenzione", JOptionPane.WARNING_MESSAGE);
-              var7.printStackTrace();
-          } catch (NumberFormatException var8) {
+              e1.printStackTrace();
+          } catch (NumberFormatException e1) {
               JOptionPane.showMessageDialog(null, "Errore non e un numero intero", "errore", JOptionPane.ERROR_MESSAGE);
-              var8.printStackTrace();
+              e1.printStackTrace();
               System.exit(1);
           }
 
