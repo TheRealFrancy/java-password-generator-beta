@@ -15,8 +15,8 @@ public class frameview extends JFrame {
         JScrollPane scrollbar= new JScrollPane(textArea);
         add(scrollbar);
         textField.setToolTipText("inserisci lunghezza password");
-       textArea.setEditable(false);
-      bottone.addActionListener(e -> {
+        textArea.setEditable(false);
+        bottone.addActionListener(e -> {
           String lenghtppsw = textField.getText();
 
           try {
@@ -24,7 +24,7 @@ public class frameview extends JFrame {
               char[] resultpsw = new char[Integer.parseInt(lenghtppsw)];
 
               for(int i = 0; i < Integer.parseInt(lenghtppsw); ++i) {
-                  int n = 1 + (int)(Math.random() * (double)Integer.parseInt(lenghtppsw));
+                  int n = 1 + (int)(Math.random()*Integer.parseInt(lenghtppsw));
                   resultpsw[i] = uniqueidchar.charAt(n);
               }
 
